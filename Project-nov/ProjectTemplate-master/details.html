@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="insurance application, work experience, learning, programming, web development">
+  <meta name="author" content="Andrew Hiles, James Anderson">
+  
+  <title>Car Insurance Application</title>
+
+  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/navigation.js"></script>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-default navbar-static-top navbar-fill" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMenu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-heart-empty"></span> Car Insurance App</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="nav navbar-nav">
+        <li id="personalLink"  class="active"><a href="#" class="navLink">Personal Details</a></li>
+        <li id="carLink"><a href="#" class="navLink">Car Details</a></li>
+        <li id="quoteLink"><a href="#"  class="navLink">Retrieve Quote</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <div class="container wrap">
+    <section id="body" class="container">
+<!--#######################################################################################################################################################
+     Do not change any of the code above this comment to begin with, it is precompleted so that you get more time doing the actual challenges and not
+     working on the setup of the code
+     #######################################################################################################################################################--> 
+
+     <!-- WRAP PERSONAL DETAILS FORM IN CHILD PANEL --> 
+     <div id="dvPersonalDetails">
+      <div id="dvPersonalDetailsAlert" class="alert alert-warning personalDetailsAlert">Error Message</div>
+      <h1>Please enter your details</h1>
+      <p>In order to provide you with a quote, we need a few details. Please complete the form below. Thanks.</p>
+
+      <div class="row">
+        <form class="form-horizontal">
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Name</label>
+            <div class="col-md-4">
+              <input id="txtName" type="text" name="nameInput" class="form-control personalDetails" placeholder="Your Name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Age</label>
+            <div class="col-md-4">
+              <input id="txtAge" type="number" name="AgeInput" class="form-control personalDetails" placeholder="Your Age" />
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Gender</label>
+            <div class="col-md-2">
+              <input value="female" id="txtOptionFemale" type="radio" name="GenderInput" class="personalDetails"/> Female
+              
+              <input value="male" id="txtOptionMale" type="radio" name="GenderInput" class="personalDetails"/> Male
+              
+              <input value="other" id="txtOptionOther" type="radio" name="GenderInput" class="personalDetails"/> Other
+            </div>
+            
+          </div>
+
+          
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Town/City</label>
+            <div class="col-md-4">
+              <input id="txtTown/City" type="text" name="Town/City" class="form-control personalDetails" placeholder="Town/City" />
+              
+            </div>
+          </div>
+
+
+          
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Email Adress</label>
+            <div class="col-md-4">
+              <input id="txtEmailAdress" type="text" name="Email" class="form-control personalDetails" placeholder="Your Email Adress" />
+              
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Years No Claim Bonus</label>
+            <div class="col-md-4">
+             
+             <select  id="yearsnoclaims"  class="form-control personalDetails">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
+
+
+
+
+
+            </select>
+            
+          </div>
+        </div>
+
+
+        
+
+        <!-- The code for the remainder of the personal fields will be added here -->
+
+        <div class="form-group">
+          <div class="col-md-4">
+            <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" />
+          </div>
+        </div>
+
+      </form>
+    </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- WRAP CAR DETAILS FORM IN CHILD PANEL -->
+  <div id="dvCarDetails" class="dvCarDetails">
+    <!-- Code for the car details section to be added here -->
+     <p>In order to provide you with a quote, we need a few details about your car. Please complete the form below. Thanks.</p>
+     <div class="row">
+        <form class="form-horizontal">
+          <label>Car Details </label>
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-2">Manufacturer</label>
+            <div class="col-md-4">
+              <select>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Mini">Mini</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Volkswagen">Volkswagen</option>
+              </select> 
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nameInput" class="control-label col-md-4">Model</label>
+            <div class="col-md-4">
+              <input id="Model" type="text" name="Model" class="form-control  Details" placeholder="Model" />
+              
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label for="nameInput" class="control-label col-md-4">Car age</label>
+            <div class="col-md-4">
+              <input id="Car Age" type="text" name="Car Age" class="form-control  Details" placeholder="Car Age" />
+              
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label for="nameInput" class="control-label col-md-4">Engine Size</label>
+            <div class="col-md-4">
+              <input id="Model" type="text" name="Model" class="form-control  Details" placeholder="Engine Size" />
+              
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label for="nameInput" class="control-label col-md-4">Cost of Car</label>
+            <div class="col-md-4">
+              <input id="Model" type="text" name="Model" class="form-control  Details" placeholder=" Cost " />
+              
+            </div>
+          </div>
+
+
+ <div class="form-group">
+            <label for="nameInput" class="control-label col-md-4">Car Storage</label>
+            <div class="col-md-4">
+              <select id="carstorage">
+                <option value="Garage">Garage</option>
+                <option value="Driveway">Driveway</option>
+                <option value="Cul-De-Sac">Cul-De-Sac</option>
+                <option value="Public Road">Public Road</option>
+              </select> 
+              
+            </div>
+          </div>
+
+           <div class="form-group">
+          <div class="col-md-4">
+            <input id="btnNext" value="Get Quote" class="btn btn-default btn-sm btn-success" onclick="getQuoteDetails()" />
+          </div>
+        </div>
+
+
+</form>
+      </div> 
+  </div>
+
+
+  <!-- WRAP Quote DETAILS FORM IN CHILD PANEL -->
+  <div id="dvQuoteDetails" class="dvQuoteDetails">
+    <!-- The display fields for the quote will be added here -->
+ <h1>Please enter your details</h1>
+      <p>Heres the insurance quote we can offer you.</p>
+
+      <div class="row">
+        <form class="form-horizontal">
+
+          <label>Quote Price£</label>
+
+          <label id="textQuote"></label>
+
+          
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+  </div>
+
+<!--#######################################################################################################################################################
+     Do not change any of the code below this comment to begin with, it is precompleted so that you get more time doing the actual challenges and not
+     working on the setup of the code
+     #######################################################################################################################################################--> 
+
+   </section>
+ </div>
+
+ <div class="footer">
+  <div class="container">
+    
+  </div>
+</div>
+  
+</body>
+</html>
+
+
